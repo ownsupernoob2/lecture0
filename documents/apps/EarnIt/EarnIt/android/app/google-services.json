@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "85711100844",
+    "project_id": "admob-2121e",
+    "storage_bucket": "admob-2121e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:85711100844:android:dcb937011495ecc58df809",
+        "android_client_info": {
+          "package_name": "com.earnit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "85711100844-l43uhfq6rohg1fbmnco8ubdj4h2i42d9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.earnit",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "85711100844-2b7iussqevqf9ti2qc49p2lnv5u1b3d9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSGyw8AXxr41H-vR67v3yuGeH3HsrEDRI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "85711100844-2b7iussqevqf9ti2qc49p2lnv5u1b3d9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "85711100844-sdtbfhss8usspcsvem1rvfh2cltbma30.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.reactnativeadmob"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
