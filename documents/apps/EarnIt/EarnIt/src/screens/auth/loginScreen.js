@@ -55,17 +55,7 @@ const LoginScreen = ({ navigation }) => {
 
   return (
     <Container>
-      <Header>
-        <Left>
-          <Button transparent onPress={() => navigation.goBack()}>
-            <Icon name="arrow-back" />
-          </Button>
-        </Left>
-        <Body>
-          <Title>Login</Title>
-        </Body>
-        <Right />
-      </Header>
+      
       <Content>
         <Form>
           <Item floatingLabel style={{ margin: 20 }}>
@@ -88,7 +78,7 @@ const LoginScreen = ({ navigation }) => {
         </Form>
 
 
-        <Button rounded style={styles.button} onPress={loginWithEmail}>
+        <Button rounded warning style={styles.button} onPress={loginWithEmail}>
           <Text> Login </Text>
         </Button>
       </Content>

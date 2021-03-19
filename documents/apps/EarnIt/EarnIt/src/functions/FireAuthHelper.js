@@ -1,6 +1,7 @@
 import React from "react";
 // import { Auth } from "../setup/firebase/FirebaseSetup";
 import Auth from "@react-native-firebase/auth";
+import { firebase } from "@react-native-firebase/firestore";
 /**
  * @description Function to Login with Phone number.
  * @param phoneNumber -Phone of Facebook which get from facebook API.
@@ -55,11 +56,18 @@ export const signInWithEmail = (email, password) => {
  * @param password - Password of the user.
  */
 
-export const signUpWithEmail = (email, password) => {
+export const signUpWithEmail = (email, password, name) => {
+ 
   return new Promise(function (resolve, reject) {
     Auth()
       .createUserWithEmailAndPassword(email, password)
       .then((user) => {
+        const db = firebase.firestore();
+
+       db.collection('users').doc(user.user.uid).set({
+            name:name,
+            email:email,
+        })
         resolve(user);
       })
       .catch((error) => {

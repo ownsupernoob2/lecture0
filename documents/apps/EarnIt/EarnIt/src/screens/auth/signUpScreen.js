@@ -132,28 +132,28 @@
 
 
 
-import React, { useState } from "react";
+import React, { Component, useState } from "react";
 import {
   Container,
-  Header,
-  Left,
-  Body,
-  Right,
-  Title,
+
   Content,
   Label,
   Input,
   Form,
   Item,
-  Button,Text,Icon,} from "native-base";
+  Button,
+  Text,
+} from "native-base";
 import { StyleSheet, Alert } from "react-native";
 import { signUpWithEmail } from "../../functions/FireAuthHelper";
 import Loader from '../../components/Loader';
-import { greaterThan } from "react-native-reanimated";
+import { getCurrentUser } from "../../functions/FireAuthHelper";
+
 
 const SignUpScreen = ({ navigation }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
   const [isLoading, setIsLoading] = useState(false); //For Loader Hide/Show
 
   /**
@@ -163,12 +163,13 @@ const SignUpScreen = ({ navigation }) => {
 
   const registerWithEmail = () => {
     setIsLoading(true)
-    signUpWithEmail(email, password)
+    signUpWithEmail(email, password, name)
       .then((user) => {
         console.log(user);
         alert("User registered Successfully");
         setEmail("");
         setPassword("");
+        setName("");
         setIsLoading(false)
       })
       .catch((error) => {
@@ -183,12 +184,27 @@ const SignUpScreen = ({ navigation }) => {
         );
       });
   };
+  // {
+
+  //   if(getCurrentUser() ){
+  //     navigation.push("Home");
+  //  }
+  //            }
 
   return (
     <Container>
     
       <Content>
         <Form>
+          <Item floatingLabel style={{ margin: 20 }}>
+            <Label>Nickname</Label>
+
+            <Input
+              placeholder="Nickname"
+              value={name}
+              onChangeText={(text) => setName(text)}
+            />
+          </Item>
           <Item floatingLabel style={{ margin: 20 }}>
             <Label>Email</Label>
             <Input

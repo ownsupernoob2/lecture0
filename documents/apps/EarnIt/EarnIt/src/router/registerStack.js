@@ -25,14 +25,14 @@ export const RegisterStack = ({ navigation }) => (
       
     />
     <Screen
-      name='Register'
+      name='signUpScreen'
       component={signUpScreen}
       options={{
         title: 'Register',
       }}
     />
     <Screen
-      name='Login'
+      name='loginScreen'
       component={loginScreen}
       options={{
         title: 'Login',

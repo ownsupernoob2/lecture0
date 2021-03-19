@@ -7,16 +7,13 @@ import {
   Right,
   Title,
   Content,
-  Label,
-  Input,
- Form,
-  Item,
+
   Button,
   Text,
   Icon,
 } from "native-base";
 import { StyleSheet } from "react-native";
-import { signOutUser, getCurrentUser } from "../service/FireAuthHelper";
+import { signOutUser, getCurrentUser } from "../functions/FireAuthHelper";
 
 const ProfileScreen = ({ navigation }) => {
   const [user, setUser] = useState(null);
@@ -59,6 +56,7 @@ const ProfileScreen = ({ navigation }) => {
 
       <Content>
         <Text>Your Email id = {user ? user.email : ""}</Text>
+        <Text>Your name  = {user ? user.name : ""}</Text>
       </Content>
     </Container>
   );

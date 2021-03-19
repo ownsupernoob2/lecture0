@@ -99,7 +99,7 @@ const LoginLanding = ({ navigation }) => {
             <Content>
                 <Button
                     style={[styles.button, { marginTop: '8%' }]}
-                    onPress={() => navigation.navigate("LoginScreen")}>
+                    onPress={() => navigation.navigate("loginScreen")}>
                     <Image
                         style={styles.btnIcon}
                         source={require('../../assets/email.png')}
@@ -126,7 +126,7 @@ const LoginLanding = ({ navigation }) => {
                     >Don't have an account?</Text>
                     <Text
                         style={styles.register}
-                        onPress={() => navigation.navigate("SignUpScreen")}>  Register </Text>
+                        onPress={() => navigation.navigate("signUpScreen")}>  Register </Text>
                 </View>
             </Content>
             <Loader isAnimate={isLoading} />

@@ -13,7 +13,7 @@ export const HomeStack = ({ navigation }) => (
     initialRouteName='Home'
     screenOptions={{
       gestureEnabled: false,
-      headerTintColor: '#03993a',
+      headerTintColor: '#fff',
       headerStyle: { backgroundColor: '#03993a', height: 70 },
       headerTitleStyle: { fontWeight: 'bold' },
       headerTitleAlign: 'center',
